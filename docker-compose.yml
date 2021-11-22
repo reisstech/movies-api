@@ -12,10 +12,10 @@ services:
 
   flask_api:
     build: 
-      context: src/services/api
+      context: src/services/flask_api
       dockerfile: Dockerfile 
     ports:
-      - "4191:5000"
+      - "49161:5000"
 
     networks:
       - dev_network

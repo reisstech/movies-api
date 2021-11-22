@@ -1,9 +1,5 @@
 import { Request, Response } from 'express'
-import { GetMoviesByGenreService} from '../services/GetMoviesByGenreService'
 import axios from 'axios'
-
-
-const getMoviesByGenreService = new GetMoviesByGenreService
 
 
 class GetMoviesByGenreController {
@@ -12,7 +8,7 @@ class GetMoviesByGenreController {
     
             const {genre_id} = request.params
             
-            const { data } = await axios.get(`http://localhost:5000/movies/${genre_id}`)
+            const { data } = await axios.get(`http://flask_api:5000/movies/${genre_id}`)
 
             return response.json(data)
 
