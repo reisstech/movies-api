@@ -4,9 +4,7 @@ services:
   node_api: 
     build: .
     ports: 
-      - "49160:3000"
-    volumes:
-      - /home/rodrigo/Projetos/movie-db-api:/app
+      - "${NODEJS_PORT:-49160}:3000"
     networks:
       - dev_network
 
@@ -15,7 +13,7 @@ services:
       context: src/services/flask_api
       dockerfile: Dockerfile 
     ports:
-      - "49161:5000"
+      - "${FLASK_PORT:-49161}:5000"
 
     networks:
       - dev_network
