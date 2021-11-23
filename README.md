@@ -16,6 +16,12 @@ fazer a requisição para a API externa do The Movie DB. A API externa retorna a
 
 ## Como usar
 
+Faça o clone do repositório:
+
+```
+git clone https://github.com/reisstech/movies-api.git
+```
+
 Com o Docker e Docker Compose instalado, execute o seguinte comando na raiz do projeto:
 
 ```
