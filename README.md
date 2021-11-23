@@ -27,5 +27,15 @@ Você poderá acessar a aplicação atráves do endereço abaixo direto no seu n
 ```
 http://localhost:49160/
 ```
+Obs: Se por algum motivo você queira alterar a porta onde a aplicação irá rodar. Basta setar no arquivo .env a porta desejada.
 
-Em seguida basta escolher um gênero de filme disponível para receber uma lista de filmes de acordo com sua escolha!
+```
+.env
+
+NODEJS_PORT=PORTA DESEJADA
+```
+
+Na página inicial do site, basta escolher um gênero de filme disponível para receber uma lista em JSON de filmes de acordo com sua escolha!
+
+Deixei a API em Flask exposta na porta 49161 para fim de testes, mas não havia necessidade. Visto de que quem recebe e entrega o que foi solicitado pelo usuário
+final é a API Node Express.
