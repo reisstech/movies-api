@@ -3,12 +3,16 @@ import express from "express"
 import { Request, Response, NextFunction } from "express"
 import "express-async-errors"
 import { router } from "./routes"
+import { config } from 'dotenv'
 
 
 const app = express()
 
+config()
 app.use(express.json())
 app.set('view engine', 'ejs')
+
+
 
 app.set('views', __dirname);
 

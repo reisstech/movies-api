@@ -4,7 +4,7 @@ services:
   node_api: 
     build: .
     ports: 
-      - "${NODEJS_PORT:-49160}:3000"
+      - "49160:3000"
     networks:
       - dev_network
 
@@ -12,9 +12,7 @@ services:
     build: 
       context: src/services/flask_api
       dockerfile: Dockerfile 
-    ports:
-      - "${FLASK_PORT:-49161}:5000"
-
+      
     networks:
       - dev_network
 
